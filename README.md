@@ -15,6 +15,13 @@ npm install
 ## Build & development
 
 Run 
-```
+```sh
 npm run dev
+```
+
+## Testing
+
+Run 
+```sh
+npm run test
 ```
