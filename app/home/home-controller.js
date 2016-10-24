@@ -19,32 +19,4 @@ export default class HomeController {
             this.songs = response.data.songs;
         });
     }
-
-    addNewPlaylist() {
-        this.PlaylistService.addNewPlaylist();
-    }
-
-    setActivePlaylist(playlist) {
-        this.PlaylistService.setActivePlaylist(playlist);
-    }
-
-    addSongToActivePlaylist(song) {
-        this.PlaylistService.addSongToActivePlaylist(song);
-    }
-
-    moveSongDown(index) {
-        const songs = this.PlaylistService.activePlaylist.songs;
-
-        if (index < songs.length - 1) {
-            songs.splice(index + 1, 0, songs.splice(index, 1)[0] );
-        }
-    }
-
-    moveSongUp(index) {
-        if (index > 0) {
-            const songs = this.PlaylistService.activePlaylist.songs;
-
-            songs.splice(index - 1, 0, songs.splice(index, 1)[0] );
-        }
-    }
 }

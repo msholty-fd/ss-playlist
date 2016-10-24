@@ -5,7 +5,7 @@
     <div id="playlists-container">
         <span class="playlists">
             <h4>My Playlists</h4>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" ng-click="home.addNewPlaylist()">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" ng-click="home.PlaylistService.addNewPlaylist()">
                 <i class="material-icons">playlist_add</i> New Playlist
             </button>
             <p ng-if="home.playlists.length === 0">You don't have any playlists yet! Add a new one to get started</p>
@@ -13,7 +13,7 @@
                 <li class="mdl-list__item playlist" 
                     ng-repeat="playlist in home.playlists" 
                     ng-class="{ active: playlist.active }"
-                    ng-click="home.setActivePlaylist(playlist)">
+                    ng-click="home.PlaylistService.setActivePlaylist(playlist)">
                     <span class="mdl-list__item-primary-content">
                         <i class="material-icons mdl-list__item-icon">queue_music</i>
                         {{ playlist.name }}
@@ -33,11 +33,11 @@
                     </span>
                     <span class="mdl-list__item-secondary-action">
                         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" 
-                            ng-click="home.moveSongDown($index)">
+                            ng-click="home.PlaylistService.moveSongDown($index)">
                             <i class="material-icons">keyboard_arrow_down</i>
                         </button>
                         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" 
-                            ng-click="home.moveSongUp($index)">
+                            ng-click="home.PlaylistService.moveSongUp($index)">
                             <i class="material-icons">keyboard_arrow_up</i>
                         </button>
                     </span>
@@ -57,7 +57,7 @@
                     <span class="song__artist">{{ song.artist }}</span>
                 </span>
                 <span class="mdl-list__item-secondary-action">
-                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" ng-click="home.addSongToActivePlaylist(song)" ng-if="home.activePlaylist && !home.activePlaylist.songs.includes(song)">
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" ng-click="home.PlaylistService.addSongToActivePlaylist(song)" ng-if="home.activePlaylist && !home.activePlaylist.songs.includes(song)">
                         <i class="material-icons">add</i>
                     </button>
                     <i class="material-icons" ng-if="home.activePlaylist && home.activePlaylist.songs.includes(song)">playlist_add_check</i>
