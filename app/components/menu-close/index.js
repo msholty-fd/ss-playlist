@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-export default angular.module('ds.components.menu-close', [])
+export default angular.module('ss.components.menu-close', [])
 
 .directive('menuClose', function() {
     return {

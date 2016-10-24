@@ -5,7 +5,7 @@ import template from './global-header-drawer.html';
 
 import GlobalHeaderController from './global-header-controller.js';
 
-export default angular.module('roulette.components.global-header-drawer', [
+export default angular.module('ss.components.global-header-drawer', [
     menuCloseModule.name
 ])
 

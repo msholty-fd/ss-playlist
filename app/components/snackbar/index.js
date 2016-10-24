@@ -4,7 +4,7 @@ import SnackbarService from './snackbar-service';
 
 import template from './snackbar.html';
 
-export default angular.module('ds.components.snackbar', [])
+export default angular.module('ss.components.snackbar', [])
 
 .component('snackbar', {
     template
