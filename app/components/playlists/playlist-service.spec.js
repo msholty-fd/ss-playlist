@@ -146,7 +146,7 @@ describe('DraftController', function() {
 
         it('shouldn\'t move the first song up', function() {
             expect(this.service.activePlaylist.songs[0].title).toBe('test me baby one more time');
-            this.service.moveSongDown(lastSongIndex);
+            this.service.moveSongUp(0);
             expect(this.service.activePlaylist.songs[0].title).toBe('test me baby one more time');
         });
     });
